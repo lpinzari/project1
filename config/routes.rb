@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   root :to => 'welcome#home'
   get '/about' => 'welcome#about', as: "about"
   resources :articles
+
+  get '/signup' => "users#new"
+  resources :users, except: [:new]
 end
