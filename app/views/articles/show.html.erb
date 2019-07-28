@@ -1,6 +1,11 @@
 <h1>Showing selected Article</h1>
 
 <p>
+  Author: <%= link_to @article.user.username, user_path(@article.user) %><br>
+  <%= pluralize(@article.user.articles.count, 'article') %>
+</p>
+
+<p>
   Title: <%= @article.title %>
 </p>
 
