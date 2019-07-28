@@ -1,0 +1,17 @@
+<h1>Log in</h1>
+
+<p>
+  <%= flash[:error_message] %>
+</p>
+
+<%= form_for(:session, url:login_path)  do |f| %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: "Enter email" %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, autocomplete: "off" %>
+
+  <%= f.submit("Sign in") %>
+
+<% end %>
