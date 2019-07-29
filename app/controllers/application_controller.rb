@@ -10,14 +10,12 @@ class ApplicationController < ActionController::Base
   end
 
   def check_for_login
-    redirect_to login_path unless @current_user.present?
+    if @article != nil
+      redirect_to login_path unless ( @current_user.present? && @current_user == @article.user )
+    else @user != nil
+      redirect_to login_path unless ( @current_user.present? && @current_user == @user )
+    end 
   end
 
-  def require_user
-    if !logged_in?
-      flash[:danger] = "You need to be logged in to perform that action"
-      redirect_to root_path
-    end
-  end
-  
+
 end
