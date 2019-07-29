@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
-  before_action :check_for_login, except: [:index, :show]
+  before_action :check_for_login, except: [:index, :show, :edit, :update]
+  before_action :require_same_user, only: [:edit, :update]
 
   def index
     @articles = Article.all
@@ -49,6 +50,12 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title,:description)
+  end
+
+  def require_same_user
+    if @current_user != @article.user and !@current_user.admin?
+      redirect_to login_path
+    end
   end
 
 end
