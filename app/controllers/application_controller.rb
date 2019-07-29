@@ -10,11 +10,12 @@ class ApplicationController < ActionController::Base
   end
 
   def check_for_login
-    if @article != nil
-      redirect_to login_path unless ( @current_user.present? && @current_user == @article.user )
-    else @user != nil
-      redirect_to login_path unless ( @current_user.present? && @current_user == @user )
-    end 
+    # if @article != nil
+    #   redirect_to login_path unless ( @current_user.present? && @current_user == @article.user )
+    # else @user != nil
+    #   redirect_to login_path unless ( @current_user.present? && @current_user == @user )
+    # end
+    redirect_to login_path unless @current_user.present?
   end
 
 
