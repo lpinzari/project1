@@ -3,3 +3,5 @@
 <p>
   Name: <%= @category.name %>
 </p>
+
+<%= render 'articles/article', obj: @category.articles %>
