@@ -4,4 +4,9 @@
   Name: <%= @category.name %>
 </p>
 
+<% if @current_user.present? && @current_user.admin? %>
+
+      <%= link_to "Edit category name", edit_category_path(@category) %>
+<% end %>
+
 <%= render 'articles/article', obj: @category.articles %>
