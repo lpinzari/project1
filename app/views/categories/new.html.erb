@@ -1,0 +1,25 @@
+<h2> New category </h2>
+<% if @category.errors.any? %>
+
+  <h2>The following errors prevented the article from getting created</h2>
+  <ul>
+    <% @category.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+
+<% end %>
+
+<%= form_for @category do |f| %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to "Cancel Request and return to articles listing", articles_path %>
