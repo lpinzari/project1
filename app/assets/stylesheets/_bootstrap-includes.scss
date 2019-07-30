@@ -14,3 +14,40 @@ $navbar-default-bg: black;
   color: #fff;
   text-decoration: none;
 }
+
+.center {
+  text-align: center;
+}
+
+// .jumbotron {
+//   background-image: asset-url('rails_welcome.png');
+//   background-size: cover;
+//   height: 470px;
+// }
+
+.jumbotron h1 {
+  color: black;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.btn-xlarge {
+  font-size: 1.7em;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
