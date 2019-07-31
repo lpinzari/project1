@@ -53,3 +53,6 @@ gem "jquery-rails", "~> 4.3"
 gem 'bootstrap-sass', '~> 3.3.7'
 
 gem 'cloudinary'
+# gem 'will_paginate', '3.1.0'
+gem 'will_paginate', git: 'https://github.com/mislav/will_paginate' #, '3.1.5'
+# gem 'bootstrap-will_paginate', '1.0.0'
