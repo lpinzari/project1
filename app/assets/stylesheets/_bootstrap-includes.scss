@@ -25,6 +25,7 @@ $navbar-default-bg: black;
 //   height: 470px;
 // }
 
+
 .jumbotron h1 {
   color: black;
   text-align: center;
@@ -50,4 +51,8 @@ footer a:hover {
 
 footer small {
   float: left;
+}
+
+.col-sm-10 {
+  margin-bottom: 10px;
 }
