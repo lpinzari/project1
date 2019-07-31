@@ -19,11 +19,12 @@ $navbar-default-bg: black;
   text-align: center;
 }
 
-// .jumbotron {
-//   background-image: asset-url('rails_welcome.png');
-//   background-size: cover;
-//   height: 470px;
-// }
+.jumbotron {
+  background-image: asset-url('welcome_page.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 470px;
+}
 
 
 .jumbotron h1 {
