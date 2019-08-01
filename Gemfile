@@ -56,3 +56,5 @@ gem 'cloudinary'
 # gem 'will_paginate', '3.1.0'
 gem 'will_paginate', git: 'https://github.com/mislav/will_paginate' #, '3.1.5'
 # gem 'bootstrap-will_paginate', '1.0.0'
+
+gem 'rails-erd', group: :development

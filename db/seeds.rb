@@ -17,3 +17,14 @@ a4 = Article.create :title => "ludo1 04", :description => "#{article_text}", :us
 a5 = Article.create :title => "ludo2 01", :description => "#{article_text}", :user_id => u2.id
 a6 = Article.create :title => "ludo2 02", :description => "#{article_text}", :user_id => u2.id
 puts "Created #{ Article.count } articles"
+
+Category.destroy_all
+c1 = Category.create :name => "Data Science"
+c2 = Category.create :name => "Human Geography"
+c3 = Category.create :name => "computer Science"
+
+puts "Associations"
+# Article and Categories
+a1.categories << c1 << c2
+a2.categories << c3
+a3.categories << c1 << c2 << c3

@@ -1,7 +1,10 @@
-# README
+# Agora Blog App
+Agora blog is a basic blog application implemented in Ruby on Rails as a backend and Bootstrap for the frontend.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+
+### Intro
+
+This
 
 Things you may want to cover:
 
